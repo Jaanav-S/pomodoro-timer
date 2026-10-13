@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomodoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <nav class="modes">
+      <button data-mode="work">Focus</button>
+      <button data-mode="short">Short break</button>
+      <button data-mode="long">Long break</button>
+    </nav>
+
+    <div id="clock" class="clock">25:00</div>
+
+    <div class="controls">
+      <button id="toggle" class="primary">Start</button>
+      <button id="reset">Reset</button>
+      <button id="skip">Skip</button>
+    </div>
+
+    <p id="sessions" class="sessions">Session 1</p>
+
+    <details class="settings">
+      <summary>Settings</summary>
+      <label>Focus (min) <input id="work-len" type="number" min="1" max="120"></label>
+      <label>Short break (min) <input id="short-len" type="number" min="1" max="60"></label>
+      <label>Long break (min) <input id="long-len" type="number" min="1" max="60"></label>
+    </details>
+  </main>
+
+  <script src="timer.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

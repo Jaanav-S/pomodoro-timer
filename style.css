@@ -58,3 +58,9 @@ button.primary {
   font-variant-numeric: tabular-nums;
   margin: 24px 0;
 }
+
+.controls {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}

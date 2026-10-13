@@ -45,3 +45,9 @@ button {
   background: rgba(0, 0, 0, 0.06);
   cursor: pointer;
 }
+
+button.active,
+button.primary {
+  background: var(--accent, var(--work));
+  color: white;
+}

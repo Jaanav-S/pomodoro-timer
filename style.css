@@ -51,3 +51,10 @@ button.primary {
   background: var(--accent, var(--work));
   color: white;
 }
+
+.clock {
+  font-size: clamp(64px, 20vw, 96px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin: 24px 0;
+}

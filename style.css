@@ -29,3 +29,10 @@ body {
   text-align: center;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
+
+.modes {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

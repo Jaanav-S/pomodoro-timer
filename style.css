@@ -73,3 +73,9 @@ button.primary {
   margin-top: 16px;
   text-align: left;
 }
+
+.settings label {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}

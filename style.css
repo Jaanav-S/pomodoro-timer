@@ -79,3 +79,7 @@ button.primary {
   justify-content: space-between;
   margin: 8px 0;
 }
+
+.settings input {
+  width: 72px;
+}

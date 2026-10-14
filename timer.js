@@ -65,3 +65,7 @@ class PomodoroTimer {
     this.setMode(nextMode(this.mode, this.completedWork));
   }
 }
+
+if (typeof module !== 'undefined') {
+  module.exports = { PomodoroTimer, formatTime, nextMode, DEFAULT_LENGTHS };
+}

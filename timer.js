@@ -9,3 +9,8 @@ function formatTime(totalSeconds) {
   const seconds = String(s % 60).padStart(2, '0');
   return `${minutes}:${seconds}`;
 }
+
+function nextMode(mode, completedWork) {
+  if (mode !== 'work') return 'work';
+  return completedWork % LONG_BREAK_EVERY === 0 ? 'long' : 'short';
+}

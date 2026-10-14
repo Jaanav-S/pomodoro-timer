@@ -34,3 +34,10 @@ function render() {
   document.body.style.setProperty('--accent', ACCENTS[timer.mode]);
   modeButtons.forEach((b) => b.classList.toggle('active', b.dataset.mode === timer.mode));
 }
+
+function notify() {
+  const message = timer.mode === 'work' ? 'Break over, back to work!' : 'Nice work, take a break.';
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification('Pomodoro', { body: message });
+  }
+}

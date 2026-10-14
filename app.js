@@ -24,3 +24,13 @@ const clock = document.getElementById('clock');
 const toggle = document.getElementById('toggle');
 const sessions = document.getElementById('sessions');
 const modeButtons = document.querySelectorAll('.modes button');
+
+function render() {
+  const left = formatTime(timer.timeLeft());
+  clock.textContent = left;
+  document.title = `${left} · ${timer.mode === 'work' ? 'Focus' : 'Break'}`;
+  toggle.textContent = timer.running ? 'Pause' : 'Start';
+  sessions.textContent = `Session ${timer.completedWork + 1}`;
+  document.body.style.setProperty('--accent', ACCENTS[timer.mode]);
+  modeButtons.forEach((b) => b.classList.toggle('active', b.dataset.mode === timer.mode));
+}

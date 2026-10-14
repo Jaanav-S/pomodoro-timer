@@ -18,3 +18,9 @@ function saveLengths(lengths) {
     // Storage can be unavailable in private windows; settings just will not persist.
   }
 }
+
+const timer = new PomodoroTimer(loadLengths());
+const clock = document.getElementById('clock');
+const toggle = document.getElementById('toggle');
+const sessions = document.getElementById('sessions');
+const modeButtons = document.querySelectorAll('.modes button');

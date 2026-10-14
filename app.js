@@ -10,3 +10,11 @@ function loadLengths() {
     return { ...DEFAULT_LENGTHS };
   }
 }
+
+function saveLengths(lengths) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(lengths));
+  } catch {
+    // Storage can be unavailable in private windows; settings just will not persist.
+  }
+}

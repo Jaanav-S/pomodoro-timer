@@ -68,3 +68,8 @@ button.primary {
 .sessions {
   opacity: 0.7;
 }
+
+.settings {
+  margin-top: 16px;
+  text-align: left;
+}

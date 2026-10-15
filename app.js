@@ -53,3 +53,7 @@ function toggleTimer() {
   }
   render();
 }
+
+toggle.addEventListener('click', toggleTimer);
+document.getElementById('reset').addEventListener('click', () => { timer.reset(); render(); });
+document.getElementById('skip').addEventListener('click', () => { timer.finish(); render(); });

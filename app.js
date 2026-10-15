@@ -71,3 +71,14 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'r') { timer.reset(); render(); }
   if (event.key === 's') { timer.finish(); render(); }
 });
+
+for (const mode of ['work', 'short', 'long']) {
+  const input = document.getElementById(`${mode}-len`);
+  input.value = timer.lengths[mode];
+  input.addEventListener('change', () => {
+    timer.lengths[mode] = Math.max(1, Number(input.value) || DEFAULT_LENGTHS[mode]);
+    saveLengths(timer.lengths);
+    if (!timer.running && timer.mode === mode) timer.reset();
+    render();
+  });
+}

@@ -82,3 +82,10 @@ for (const mode of ['work', 'short', 'long']) {
     render();
   });
 }
+
+setInterval(() => {
+  if (timer.tick()) notify();
+  render();
+}, 250);
+
+render();

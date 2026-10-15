@@ -41,3 +41,15 @@ function notify() {
     new Notification('Pomodoro', { body: message });
   }
 }
+
+function toggleTimer() {
+  if (timer.running) {
+    timer.pause();
+  } else {
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission();
+    }
+    timer.start();
+  }
+  render();
+}

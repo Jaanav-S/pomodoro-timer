@@ -64,3 +64,10 @@ modeButtons.forEach((button) => {
     render();
   });
 });
+
+document.addEventListener('keydown', (event) => {
+  if (event.target.tagName === 'INPUT') return;
+  if (event.code === 'Space') { event.preventDefault(); toggleTimer(); }
+  if (event.key === 'r') { timer.reset(); render(); }
+  if (event.key === 's') { timer.finish(); render(); }
+});

@@ -57,3 +57,10 @@ function toggleTimer() {
 toggle.addEventListener('click', toggleTimer);
 document.getElementById('reset').addEventListener('click', () => { timer.reset(); render(); });
 document.getElementById('skip').addEventListener('click', () => { timer.finish(); render(); });
+
+modeButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    timer.setMode(button.dataset.mode);
+    render();
+  });
+});

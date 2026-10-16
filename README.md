@@ -20,3 +20,8 @@ so you can keep an eye on it from another tab.
 
 Session lengths can be changed in the settings panel and are remembered
 in `localStorage`.
+
+## Project layout
+
+- `timer.js`: timer state machine with no DOM code, easy to test
+- `app.js`: wires the timer to the page

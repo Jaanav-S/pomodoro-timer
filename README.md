@@ -15,3 +15,8 @@ so you can keep an eye on it from another tab.
 | Space | Start / pause |
 | R     | Reset         |
 | S     | Skip session  |
+
+## Settings
+
+Session lengths can be changed in the settings panel and are remembered
+in `localStorage`.
